@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ru.aasmc.grpc.proto";
+option java_outer_classname = "ExampleProto";
+
+message ExampleRq {
+  string name = 1;
+  int32 code = 2;
+}
+
+message ExampleRs {
+  string response = 1;
+  int32 code = 2;
+}
+
+service ExampleService {
+  rpc Example (ExampleRq) returns (ExampleRs){
+  }
+
+  rpc ExampleStream (ExampleRq) returns (stream ExampleRs) {
+  }
+}
