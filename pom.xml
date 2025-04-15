@@ -108,6 +108,18 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <environment>
+                        <BP_JVM_VERSION>17.*</BP_JVM_VERSION>
+                    </environment>
+                </configuration>
             </plugin>
         </plugins>
     </build>
