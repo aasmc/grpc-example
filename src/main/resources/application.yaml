@@ -4,3 +4,11 @@ spring:
   grpc:
     server:
       port: 9090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 9092
