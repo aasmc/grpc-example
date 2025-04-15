@@ -34,21 +34,6 @@ spec:
           ports:
             - containerPort: 9090
               protocol: TCP
-            - containerPort: 9092
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: 9092
-            initialDelaySeconds: 30
-            periodSeconds: 15
-          readinessProbe:
-            httpGet:
-              path: /actuator/health/readiness
-              port: 9092
-            initialDelaySeconds: 30
-            periodSeconds: 15
-            successThreshold: 1
           resources:
             requests:
               cpu: 125m

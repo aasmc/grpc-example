@@ -13,7 +13,3 @@ spec:
       port: 9090
       targetPort: 9090
       name: grpc-9090
-    - protocol: TCP
-      port: 9092
-      targetPort: 9092
-      name: http-9092
